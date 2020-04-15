@@ -1,0 +1,240 @@
+package dataReader;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class APIConfigReader extends JsonFileReader {
+
+	public String username;
+	public String password;
+	public String apiConfigReader;
+		
+		public Properties prop() throws IOException 
+		{
+		Properties prop = new Properties();
+		FileInputStream ip= new FileInputStream(System.getProperty("user.dir") + "/src/main/java/DataObjects/APIConfig.properties");
+		prop.load(ip);
+		return prop;
+		}
+		
+		public String username() throws IOException
+		{			
+			return prop().getProperty("Username");
+			//username = prop().getProperty("Username");
+			//return username;
+		}
+		
+		public String password() throws IOException
+		{
+			return prop().getProperty("Password");
+			//password = prop().getProperty("Password");
+			//return password;
+		}
+		
+		public String tokenKey() throws IOException
+		{
+			return prop().getProperty("AuthorizationKey");
+			//String tokenKey = prop().getProperty("AuthorizationKey");
+			//return tokenKey;
+		}
+		
+		public String tokenValue() throws IOException
+		{
+			String tokenValuePart1 = prop().getProperty("AuthorizationValuePart1");
+			String tokenValuePart2 = prop().getProperty("AuthorizationValuePart2");
+			
+			return tokenValuePart1 + " " + tokenValuePart2;
+			
+		}
+		
+		public String getAllJenkinsTransactionsURL_Resoruce() throws IOException
+		{
+			
+			return prop().getProperty("GetallJenkinsTransactionsURL_Resoruce");
+			//String allJenkinsTransactionPostFix = prop().getProperty("GetallJenkinsTransactionsURL_Resoruce");
+			//return allJenkinsTransactionPostFix;
+		}
+		
+		public String insertJenkinsTransactionURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("InserJenkinsTransactionURL_Resoruce");
+			
+			//String inserJenkinsTransactionPostFix = prop().getProperty("InserJenkinsTransactionURL_Resoruce");
+			//return inserJenkinsTransactionPostFix;
+		}
+		
+		public String getAllHearingSheetURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("GetAllHearingSheet_Resource");
+			
+			//String getallhearingsheetPostFix = prop().getProperty("GetAllHearingSheet_Resource");
+			//return getallhearingsheetPostFix;
+		}
+		
+		public String createHearingSheetURL_Resource() throws IOException
+		{
+			String getallhearingsheetPostFix = prop().getProperty("GetAllHearingSheet_Resource");
+			return getallhearingsheetPostFix.substring(0, getallhearingsheetPostFix.length()-1);
+		}
+		public String insertJCustomScriptDataURL_Resource() throws IOException
+		{
+			return prop().getProperty("insertJCustomScriptDataURL_Resource");
+			//String insertJCustomScriptDataURL = prop().getProperty("insertJCustomScriptDataURL_Resource");
+			//return insertJCustomScriptDataURL;
+		}
+		
+		public String updateCatalogURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("UpdateCatalogURL_Resoruce");
+			//String updateCatalogPostFix = prop().getProperty("UpdateCatalogURL_Resoruce");
+			//return updateCatalogPostFix;
+		}
+
+		public String findAJenkinsTrnasactionBybuildIdURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("FindaJenkinsTrnasactionfindbybuildIdURL_Resoruce");
+			//String findAJenkinsTrnasactionPostFix = prop().getProperty("FindaJenkinsTrnasactionfindbybuildIdURL_Resoruce");
+			//return findAJenkinsTrnasactionPostFix;
+		}
+		
+		public String searchCustomScriptDataURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("searchCustomScriptDataURL_Resoruce");
+			
+			//String searchCustomScriptDataPostFix = prop().getProperty("searchCustomScriptDataURL_Resoruce");
+			//return searchCustomScriptDataPostFix;
+		}
+		
+		
+		public String editCustomScriptDataURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("editCustomScriptDataURL_Resoruce");
+			//String editCustomScriptDataPostFix = prop().getProperty("editCustomScriptDataURL_Resoruce");
+			//return editCustomScriptDataPostFix;
+		}
+		
+		public String findAJenkinsTrnasactionByqueueIdURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("FindaJenkinsTrnasactionfindbyqueueIdURL_Resoruce");
+			//String findAJenkinsTrnasactionPostFix = prop().getProperty("FindaJenkinsTrnasactionfindbyqueueIdURL_Resoruce");
+			//return findAJenkinsTrnasactionPostFix;
+		}
+		
+		public String deleteJenkinsTransactionURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("DeleteJenkinsTransactionURL_Resoruce");
+			
+			//String deleteJenkinsTransactionPostFix = prop().getProperty("DeleteJenkinsTransactionURL_Resoruce");
+			//return deleteJenkinsTransactionPostFix;
+		}
+		
+		public String cancelJekninsTransactionURL_Resoruce() throws IOException
+		{
+			return prop().getProperty("CancelJekninsTransactionURL_Resoruce");
+//			String cancelJekninsTransactionPostFix = prop().getProperty("CancelJekninsTransactionURL_Resoruce");
+	//		return cancelJekninsTransactionPostFix;
+		}
+		
+
+		public String getAllPendingScheduledJobsURL_Resource() throws IOException
+		{
+			
+		return prop().getProperty("GetAllPendingScheduledJobsURL_Resource");
+//			String getAllPendingScheduledJobsPostFix = prop().getProperty("GetAllPendingScheduledJobsURL_Resource");
+	//		return getAllPendingScheduledJobsPostFix;
+		}
+		
+		public String apiQuerySpearator() throws IOException
+		{
+		
+			return prop().getProperty("QuerySeparatior");
+			//String apiQuerySpearator = prop().getProperty("QuerySeparatior");
+			//return apiQuerySpearator;
+		}
+		
+		public String queryParameter_Operator() throws IOException
+		{
+			return prop().getProperty("QueryParameter_Operator");
+			//String queryParameter_Operator = prop().getProperty("QueryParameter_Operator");
+			//return queryParameter_Operator;
+		}
+		
+		public String querPararmeter_Buildid() throws IOException
+		{
+			return prop().getProperty("QuerPararmeter_buildId");
+///			String querPararmeter_Buildid = prop().getProperty("QuerPararmeter_buildId");
+	//		return querPararmeter_Buildid;
+		}
+		
+		public String querPararmeter_type() throws IOException
+		{
+		return 	prop().getProperty("QuerPararmeter_type");
+			//String querPararmeter_type = prop().getProperty("QuerPararmeter_type");
+			//return querPararmeter_type;
+		}
+		
+		public String querPararmeter_name() throws IOException
+		{
+			return prop().getProperty("QuerPararmeter_name");
+			//String querPararmeter_name = prop().getProperty("QuerPararmeter_name");
+			//return querPararmeter_name;
+		}
+		
+		public String querPararmeter_queueid() throws IOException
+		{
+			return prop().getProperty("QuerPararmeter_queueId");
+			//String querPararmeter_queueid = prop().getProperty("QuerPararmeter_queueId");
+			//return querPararmeter_queueid;
+		}
+		
+		public String querPararmeter_jobName() throws IOException
+		{
+			
+			String querPararmeter_jobName = prop().getProperty("QuerPararmeter_jobName");
+			return querPararmeter_jobName;
+		}
+		
+		public String querPararmeterhearingsheet_id() throws IOException
+		{
+			
+			String querPararmeterhearingsheet_id = prop().getProperty("QuerPararmeter_hearingSheetid");
+			return querPararmeterhearingsheet_id;
+		}
+		
+		public String querPararmeterhearingsheet_name() throws IOException
+		{
+			
+			String querPararmeterhearingsheet_name = prop().getProperty("QuerPararmeter_hearingSheetName");
+			return querPararmeterhearingsheet_name;
+		}
+		
+		public String querPararmeterhearingsheet_createdBy() throws IOException
+		{
+			
+			String querPararmeterhearingsheet_createdBy = prop().getProperty("QuerPararmeter_hearingSheetcreatedBy");
+			return querPararmeterhearingsheet_createdBy;
+		}
+
+		public String getAllUpdatedScheduledJobs_Resource() throws IOException
+		{
+			
+			String getAllUpdatedScheduledJobs_Resource = prop().getProperty("GetAllUpdatedScheduledJobs_Resource");
+			return getAllUpdatedScheduledJobs_Resource;
+		}
+		
+		//GetAllCancelledScheduledJobs_Resource
+		public String getAllCancelledScheduledJobs_Resource() throws IOException
+		{
+			
+			String getAllCancelledScheduledJobs_Resource = prop().getProperty("GetAllCancelledScheduledJobs_Resource");
+			return getAllCancelledScheduledJobs_Resource;
+		}
+		
+		public String baseURL() throws IOException
+		{
+			String base_URL = prop().getProperty("Base_URL");
+			return base_URL;
+		}
+
+}

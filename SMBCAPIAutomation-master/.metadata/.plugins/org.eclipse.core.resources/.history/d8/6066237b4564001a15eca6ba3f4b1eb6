@@ -1,0 +1,99 @@
+package apiInvalidTest;
+
+import org.testng.annotations.Test;
+
+import utilities.ValidateResponse;
+
+import java.io.IOException;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeTest;
+
+public class JenkinsTransactionStore_InvalidTest extends ValidateResponse {
+	private String tcName;
+	private String apiURL;
+	
+	@Test(priority = 1)
+	public void findAJenkinsTransaction_withbuilIdQueryParamter_InvalidTest() throws IOException
+	{
+		//Find a jenkins transaction with QueryParameter NotEmpty HappyPath
+		//tcName = "Find a Jenkins Transaction with QueryParameter NotEmpty HappyPathTest";
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionBybuildIdURL_Resoruce(), querPararmeter_Buildid(),"",querPararmeter_jobName(), "");
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 2)
+	public void findAJenkinsTransaction_withqueueIdQueryParamter_Invalidtest() throws IOException
+	{
+		//Find a jenkins transaction with QueryParameter NotEmpty HappyPath
+		//tcName = "Find a Jenkins Transaction with QueryParameter NotEmpty HappyPathTest";
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionByqueueIdURL_Resoruce(),querPararmeter_queueid(),"",querPararmeter_jobName(), "");
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 3)
+	public void insertJenkinsTransaction_InvalidTest() throws IOException
+	{
+		//Insert Jenkins Transaction HappyPath
+		//tcName = ;
+		apiURL = postAPI_WithBodyParameter(insertJenkinsTransactionURL_Resoruce());
+		postCall_WithBodyParameters("Insert Jenkins Transaction InvalidTest", apiURL, "invalidBodyParam");
+		validateStatusCodeBadRequest(response);
+	}
+	
+	@Test(priority = 4)
+	public void updateCatalog_HappyPath() throws IOException
+	{
+		//Update Catalog HappyPath
+		//tcName = "Update Catalog HappyPathTest";
+		apiURL = postAPI_WithBodyParameter(updateCatalogURL_Resoruce());
+		postCall_WithBodyParameters("Update Catalog HappyPathTest", apiURL, "invalidBodyParam");
+		validateStatusCodeBadRequest(response);
+	}
+	
+	@Test(priority = 5)
+	public void deleteAJenkinsTransaction_QueryParameterNotEmpty_invalidTest() throws IOException
+	{
+		//Delete a Jenkins Transaction HappyPath
+		//tcName = "Delete a Jenkins Transacton with QueryParameter NotEmpty HappyPathTest";
+		apiURL = deleteAPI_Delete(deleteJenkinsTransactionURL_Resoruce(), querPararmeter_Buildid(),"" , querPararmeter_jobName(), "");		
+		deleteCall("Delete a Jenkins Transacton with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 6)
+	public void cancelAJenkinsTransaction_QueryParameterNotEmpty_invalidTest() throws IOException
+	{
+		//Cancel a Jenkins Transaction with QueryParameter NotEmpty HappyPath
+		//tcName = "Cancel a Jenkins Transacton with QueryParameter NotEmpty HappyPathTest";
+		apiURL = postAPI_WithoutBodyParameter(cancelJekninsTransactionURL_Resoruce(), querPararmeter_queueid(), "", querPararmeter_jobName(),"");
+		postCall_WithOutBodyParameters("Cancel a Jenkins Transacton with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+		
+	@BeforeTest
+	public void reportGeneration()
+	{
+		report();
+	}
+	
+	@AfterSuite
+	public void email() throws AddressException, MessagingException, Throwable
+	{
+		sendMailWithAttachment();
+		
+	}
+	
+	@AfterMethod
+	public void flushExtReport()
+	{
+		extflush();
+	}
+
+}

@@ -1,0 +1,64 @@
+package apiInvalidTest;
+
+import org.testng.annotations.Test;
+
+import utilities.TestBase;
+import java.io.IOException;
+
+public class JenkinsTransactionStore_InvalidTest extends TestBase {
+	private String apiURL;
+	
+	@Test(priority = 1)
+	public void findAJenkinsTransaction_withbuilIdQueryParamter_InvalidTest() throws IOException
+	{
+		//Find a jenkins transaction invalid test
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionBybuildIdURL_Resoruce(), querPararmeter_Buildid(),"",querPararmeter_jobName(), "");
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 2)
+	public void findAJenkinsTransaction_withqueueIdQueryParamter_Invalidtest() throws IOException
+	{
+		//Find a jenkins transaction invalid test
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionByqueueIdURL_Resoruce(),querPararmeter_queueid(),"",querPararmeter_jobName(), "");
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty invalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 3)
+	public void insertJenkinsTransaction_InvalidTest() throws IOException
+	{
+		//Insert Jenkins Transaction invalid test
+		apiURL = postAPI_WithBodyParameter(insertJenkinsTransactionURL_Resoruce());
+		postCall_WithBodyParameters("Insert Jenkins Transaction InvalidTest", apiURL, "invalidBodyParam");
+		validateStatusCodeBadRequest(response);
+	}
+	
+	@Test(priority = 4)
+	public void updateCatalog_InvalidTest() throws IOException
+	{
+		//Update Catalog invalid test
+		apiURL = postAPI_WithBodyParameter(updateCatalogURL_Resoruce());
+		postCall_WithBodyParameters("Update Catalog InvalidTest", apiURL,invalidBodyParam() ); //"invalidBodyParam"
+		validateStatusCodeBadRequest(response);
+	}
+	
+	@Test(priority = 5)
+	public void deleteAJenkinsTransaction_invalidTest() throws IOException
+	{
+		//Delete a Jenkins Transaction invalid test
+		apiURL = deleteAPI_Delete(deleteJenkinsTransactionURL_Resoruce(), querPararmeter_Buildid(),"" , querPararmeter_jobName(), "");		
+		deleteCall("Delete a Jenkins Transacton InvalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+	
+	@Test(priority = 6)
+	public void cancelAJenkinsTransaction_invalidTest() throws IOException
+	{
+		//Cancel a Jenkins Transaction invalid test
+		apiURL = postAPI_WithoutBodyParameter(cancelJekninsTransactionURL_Resoruce(), querPararmeter_queueid(), "", querPararmeter_jobName(),"");
+		postCall_WithOutBodyParameters("Cancel a Jenkins Transacton InvalidTest", apiURL);
+		validateStatusCodeInternalServerError(response);
+	}
+}

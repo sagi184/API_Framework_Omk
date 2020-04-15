@@ -1,0 +1,9 @@
+{
+	"orderId": "1234",
+	"buildId": "32",
+	"jobName": "TestAutomate_02",
+	"status": "requested",
+	"isScheduledJob": true,
+	"createdBy": "testuser",
+	"schedule": "02/01/2019 10:00"
+}

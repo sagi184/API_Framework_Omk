@@ -1,0 +1,104 @@
+package apiHappyPathTest;
+
+import org.testng.annotations.Test;
+import utilities.TestBase;
+import java.io.IOException;
+
+public class JenkinsTransactionStore_HappyPathTest extends TestBase {
+
+	private String apiURL;
+
+	@Test(priority = 1)
+	public void insertJenkinsTransaction_HappyPath() throws IOException
+	{
+		//Insert Jenkins Transaction HappyPath
+		apiURL = postAPI_WithBodyParameter(insertJenkinsTransactionURL_Resoruce());
+		postCall_WithBodyParameters("Insert Jenkins Transaction HappyPathTest", apiURL, validBodyParam()); //"validBodyParam"
+		validateStatusCodeCreated(response);
+	}
+
+	@Test(priority = 2)
+	public void getAllJenkinsTransaction_HappyPath() throws IOException
+	{
+		//Get all Jenkins transactions HappyPath
+		apiURL = getAPI_WithoutQueryParameter(getAllJenkinsTransactionsURL_Resoruce());
+		getCall("Get All Jeknins Transaction HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+
+	}
+
+	@Test(priority = 3)
+	public void findAJenkinsTransaction_withbuilIdQueryParamter_HappyPath() throws IOException
+	{
+		//Find a jenkins transaction with QueryParameter NotEmpty HappyPath
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionBybuildIdURL_Resoruce(), querPararmeter_Buildid(),buildId(), querPararmeter_jobName(), jobName());
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	@Test(priority = 4)
+	public void findAJenkinsTransaction_withqueueIdQueryParamter_HappyPath() throws IOException
+	{
+		//Find a jenkins transaction with QueryParameter NotEmpty HappyPath
+		apiURL = getAPI_WithQueryParam(findAJenkinsTrnasactionByqueueIdURL_Resoruce(),querPararmeter_queueid(),queueId(),querPararmeter_jobName(), jobName());
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+	@Test (priority = 10)
+	public void deleteAJenkinsTransaction_HappyPath() throws IOException
+	{
+		//Delete a Jenkins Transaction HappyPath
+		apiURL = deleteAPI_Delete(deleteJenkinsTransactionURL_Resoruce(), querPararmeter_Buildid(),buildId(), querPararmeter_jobName(), jobName());		
+		deleteCall("Delete a Jenkins Transacton with QueryParameter NotEmpty HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+	@Test(priority = 9)
+	public void cancelAJenkinsTransaction_HappyPath() throws IOException
+	{
+		//Cancel a Jenkins Transaction with QueryParameter NotEmpty HappyPath
+		apiURL = postAPI_WithoutBodyParameter(cancelJekninsTransactionURL_Resoruce(), querPararmeter_queueid(), queueId(), querPararmeter_jobName(), jobName());
+		postCall_WithOutBodyParameters("Cancel a Jenkins Transacton with QueryParameter NotEmpty HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+	@Test(priority = 5)
+	public void updateCatalog_HappyPath() throws IOException
+	{
+		//Update Catalog HappyPath
+		apiURL = postAPI_WithBodyParameter(updateCatalogURL_Resoruce());
+		postCall_WithBodyParameters("Update Catalog HappyPathTest", apiURL, "validBodyParam");
+		validateStatusCodeOK(response);
+	}
+
+
+	@Test(priority = 6)
+	public void getAllPendingScheduledJobs_HappyPathTest() throws IOException
+	{
+		//Get All Pending Scheduled Jobs HappyPathTest
+		apiURL = getAPI_WithoutQueryParameter(getAllPendingScheduledJobsURL_Resource());
+		getCall("Get All Pending Scheduled Jobs HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+	@Test(priority = 7)
+	public void getAllUpdatedScheduledJobs_HappyPathTest() throws IOException
+	{
+		//Get All Updated Scheduled Jobs HappyPathTest
+		apiURL = getAPI_WithoutQueryParameter(getAllUpdatedScheduledJobs_Resource());
+		getCall("Get All Updated Scheduled Jobs HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+
+	@Test(priority = 8)
+	public void getAllCancelledScheduledJobs_HappyPathTest() throws IOException
+	{
+		//Get All Cancelled Scheduled Jobs HappyPathTest
+		apiURL = getAPI_WithoutQueryParameter(getAllCancelledScheduledJobs_Resource());
+		getCall("Get All Cancelled Scheduled Jobs HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+
+}

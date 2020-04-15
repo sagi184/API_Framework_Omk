@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SMBC_APITesting_RegressionSuite">
+  <test thread-count="5" name="APIAutomation_TestCases">
+    <classes>
+      <class name="apiHappyPathTest.JenkinsTransactionStore_HappyPathTest"/>
+      <class name="apiHappyPathTest.StaticPage_HappyPathTest"/>
+      <class name="apiHappyPathTest.ServiceProvisioning_HappyPathTest"/>
+      <class name="apiInvalidTest.JenkinsTransactionStore_InvalidTest"/>
+      <class name="apiInvalidTest.StaticPage_InvalidTest"/>      
+    </classes>
+  </test> <!-- APIAutomation_TestCases -->
+</suite> <!-- SMBC_APITesting_RegressionSuite -->

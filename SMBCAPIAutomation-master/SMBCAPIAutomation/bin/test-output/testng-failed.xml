@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SMBC_APITesting_RegressionSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="APIAutomation_TestCases(failed)">
+    <classes>
+      <class name="API_InvalidTest.JenkinsTransactionStore_InvalidTest">
+        <methods>
+          <include name="flushExtReport"/>
+          <include name="email"/>
+          <include name="FindAJenkinsTransaction_QueryParamterEmpty_InvalidTest"/>
+          <include name="ReportGeneration"/>
+        </methods>
+      </class> <!-- API_InvalidTest.JenkinsTransactionStore_InvalidTest -->
+      <class name="API_HappyPathTest.JenkinsTransactionStore_HappyPathTest">
+        <methods>
+          <include name="GetAllCancelledScheduledJobs_HappyPathTest"/>
+          <include name="FindAJenkinsTransaction_QueryParamterNotEmpty_HappyPath"/>
+          <include name="ReportGeneration"/>
+          <include name="GetAllJenkinsTransaction_HappyPath"/>
+          <include name="UpdateCatalog_HappyPath"/>
+          <include name="CancelAJenkinsTransaction_QueryParameterNotEmpty_HappyPath"/>
+          <include name="InsertJenkinsTransaction_HappyPath"/>
+          <include name="flushExtReport"/>
+        </methods>
+      </class> <!-- API_HappyPathTest.JenkinsTransactionStore_HappyPathTest -->
+    </classes>
+  </test> <!-- APIAutomation_TestCases(failed) -->
+</suite> <!-- Failed suite [SMBC_APITesting_RegressionSuite] -->

@@ -1,0 +1,6 @@
+{
+    "type" : "server",
+    "name" : "server1",
+    "data" : "{'abc' : 'xyz', 'def' : 'pqr'}"
+    	
+}

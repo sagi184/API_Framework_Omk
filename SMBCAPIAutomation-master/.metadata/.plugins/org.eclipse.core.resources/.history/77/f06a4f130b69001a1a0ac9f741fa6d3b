@@ -1,0 +1,45 @@
+package helper;
+
+import java.io.IOException;
+
+import dataReader.APIConfigReader;
+
+public class EndpointGeneration extends APIConfigReader {
+public String geAPIURL;
+public String postAPIURL;
+public String deleteAPIURL;
+	
+public String getAPI_WithoutQueryParameter(String apiResource) throws IOException
+{
+return geAPIURL = baseURL() + apiResource;
+}
+
+public String getAPI_WithQueryParam(String apiResource, String firstQueryParmVariable, String firstQueryParmValue, String secondQueryParmVariable, String secondQueryParmValue) throws IOException
+{
+	if (secondQueryParmVariable == "" && secondQueryParmValue == "")
+	{
+	return geAPIURL = baseURL() + apiResource + apiQuerySpearator() + firstQueryParmVariable + firstQueryParmValue;
+	}
+	else {
+		
+	return geAPIURL = baseURL() + apiResource + apiQuerySpearator() + firstQueryParmVariable + firstQueryParmValue + queryParameter_Operator() + secondQueryParmVariable + secondQueryParmValue;
+	}
+}
+
+public String postAPI_WithBodyParameter(String apiResource) throws IOException
+{
+ return this.postAPIURL = baseURL() + apiResource;
+}
+
+
+public String postAPI_WithoutBodyParameter(String apiResource, String firstQueryParmVariable, String firstQueryParmValue, String secondQueryParmVariable, String secondQueryParmValue) throws IOException
+{
+	return postAPIURL = baseURL() + apiResource + apiQuerySpearator() + firstQueryParmVariable + firstQueryParmValue + queryParameter_Operator() + secondQueryParmVariable + secondQueryParmValue;
+}
+
+public String deleteAPI_Delete(String apiResource, String firstQueryParmVariable, String firstQueryParmValue, String secondQueryParmVariable, String secondQueryParmValue) throws IOException
+{
+	return deleteAPIURL = baseURL() + apiResource + apiQuerySpearator() + firstQueryParmVariable + firstQueryParmValue + queryParameter_Operator() + secondQueryParmVariable + secondQueryParmValue;
+}
+
+}

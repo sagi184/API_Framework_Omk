@@ -1,0 +1,22 @@
+{
+    	"systemcode": "ppcob",
+    	"usagetype": "webserver",
+    	"site":"singapore",
+    	"environment":"production",
+    	"location" : "singapore",
+    	"servertype" : "virtual machine",
+    	"storage" : "test",
+    	"domain" : "test",
+    	"operatingsystem" : "linux1",
+    	"databasesoftware" : "ms sql 2016",
+    	"usagetemplate" : "database",
+    	"cpu" : 4,
+    	"ram" : 6,
+    	"drives": 
+    	[
+    		{"C" : 1000},
+    		{"D" :200},
+    		{"E" : 100}
+    	]
+    
+}

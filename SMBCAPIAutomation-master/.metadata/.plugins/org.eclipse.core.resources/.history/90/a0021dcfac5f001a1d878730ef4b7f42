@@ -1,0 +1,133 @@
+package dataReader;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.JsonProcessingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.node.ObjectNode;
+
+import com.mongodb.util.JSON;
+
+import helper.APIURL_Objects;
+import helper.EndpointGeneration;
+import helper.HttpStatusCodes;
+
+public class JsonFileReader extends HttpStatusCodes{
+	//public ; 
+	
+	JsonFileReader()
+	{
+		APIURL_Objects apiobjects = new APIURL_Objects();
+	}
+	
+	public String generateStringFromResource(String path) throws IOException{
+
+	    return new String(Files.readAllBytes(Paths.get(path)));
+
+	}
+	
+	public String bodyParameterJsonReader(String APIURL, String bodyParamValidation) throws IOException //String TC_Name
+	{	
+		//apiobjects = new APIURL_Objects();
+		String jsonBody;
+		
+		if (APIURL.equals(apiobjects.updateCatalogAPIURL_HappyPath))
+		{
+			jsonBody = generateStringFromResource(System.getProperty("user.dir") + "/src/main/java/DataObjects/UpdateCatalog_BodyParam.json");
+		}
+		else if(APIURL.equals(apiobjects.updateCatalogAPIURL_HappyPath))
+		{
+			jsonBody = generateStringFromResource(System.getProperty("user.dir") + "/src/main/java/DataObjects/InsertCustomScriptData.json");	
+		}
+		
+		else if (APIURL.equals(apiobjects.InsertJenkinstransactionAPIURL_HappyPath))
+		{
+			jsonBody = generateStringFromResource(System.getProperty("user.dir") + "/src/main/java/DataObjects/InsertJenkins_BodyParam.json");
+				
+			
+		}
+		else
+		{
+			jsonBody = generateStringFromResource(System.getProperty("user.dir") + "/src/main/java/DataObjects/InsertCustomScriptData.json");
+			jsonBody = editCustomScriptBodyParam(jsonBody);
+			
+		}
+		
+		if(bodyParamValidation == "invalidBodyParam")
+		{
+			jsonBody = "";
+			//jsonBody.
+		}
+		
+						
+		return jsonBody;	
+		
+	}
+	
+	
+		
+	
+	public String buildId() throws IOException
+	{		
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(bodyParameterJsonReader(apiobjects.InsertJenkinstransactionAPIURL_HappyPath,"validBodyParam"));
+		//((ObjectNode)rootNode).remove(fieldNames)
+		//JsonNode buildid_node1 = rootNode.
+		JsonNode buildid_node = rootNode.path("buildId");
+		String buildid = buildid_node.asText();
+		return buildid;		
+	}
+	
+	public String editCustomScriptBodyParam(String Jsonbody) throws JsonProcessingException, IOException
+	{
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(Jsonbody);
+		((ObjectNode)rootNode).remove("type");
+		((ObjectNode)rootNode).remove("name");
+		return mapper.writeValueAsString(rootNode);		
+		//return edit;	
+		
+	}
+	
+	
+	
+	public String type() throws IOException
+	{		
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(bodyParameterJsonReader(apiobjects.expectedInsertCustomScriptDataURL,"validBodyParam"));
+		JsonNode type_node = rootNode.path("type");
+		String type = type_node.asText();
+		return type;		
+	}
+	
+	public String name() throws IOException
+	{		
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(bodyParameterJsonReader(apiobjects.expectedInsertCustomScriptDataURL,"validBodyParam"));
+		JsonNode name_node = rootNode.path("name");
+		String name = name_node.asText();
+		return name;		
+	}
+	
+	public String queueId() throws IOException
+	{		
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(bodyParameterJsonReader(apiobjects.InsertJenkinstransactionAPIURL_HappyPath,"validBodyParam"));
+		JsonNode queueid_node = rootNode.path("queueId");
+		String queueid = queueid_node.asText();
+		return queueid;		
+	}
+	
+	public String jobName() throws IOException
+	{		
+		ObjectMapper mapper = new ObjectMapper();		
+		JsonNode rootNode = mapper.readTree(bodyParameterJsonReader(apiobjects.InsertJenkinstransactionAPIURL_HappyPath,"validBodyParam"));
+		JsonNode jobName_node = rootNode.path("jobName");
+		String jobName = jobName_node.asText();
+		return jobName;		
+	}
+
+
+}

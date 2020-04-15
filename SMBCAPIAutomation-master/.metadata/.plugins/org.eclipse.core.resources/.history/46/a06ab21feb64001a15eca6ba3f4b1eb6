@@ -1,0 +1,110 @@
+package utilities;
+
+import java.io.IOException;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
+public class TestBase extends ValidateResponse {
+
+	@BeforeClass
+	public void beforeclass() throws IOException
+	{
+		api_objects();
+		//report();
+	}	
+	
+	@BeforeTest
+	public void reportGeneration() 
+	{
+		report();          //initExtentReport, initReport		
+	}
+
+
+	/*@AfterMethod
+	public void flushExtReport()
+	{
+		extflush();
+	}*/
+	
+	
+	
+	/*@BeforeClass
+	public void beforeclass() throws IOException
+	{
+		api_objects();
+	}*/
+	
+	/*@BeforeTest
+	public void reportGeneration() 
+	{
+		report();          //initExtentReport, initReport
+	}*/
+
+
+	/*@AfterMethod
+	public void flushExtReport()
+	{
+		extflush();
+	}*/
+	
+	
+	/*@BeforeClass
+	public void beforeclass() throws IOException
+	{
+		api_objects();
+	}*/
+	
+	/*@BeforeTest
+	public void reportGeneration()
+	{
+		report();
+	}*/
+	
+	@AfterSuite
+	public void email() throws AddressException, MessagingException, Throwable
+	{
+		extflush();
+		Thread.sleep(20000);
+		sendMailWithAttachment();
+		
+	}
+	
+	/*@AfterMethod
+	public void flushExtReport()
+	{
+		extflush();
+	}*/
+
+	
+	/*@BeforeClass
+	public void beforeclass() throws IOException
+	{
+		api_objects();
+	}*/
+	
+	/*@BeforeTest
+	public void reportGeneration()
+	{
+		report();
+	}*/
+	
+	/*@AfterSuite
+	public void email() throws AddressException, MessagingException, Throwable
+	{
+		sendMailWithAttachment();
+		
+	}*/
+	
+		
+	/*@AfterSuite
+	public void flushExtReport()
+	{
+		extflush();
+	}*/
+
+}

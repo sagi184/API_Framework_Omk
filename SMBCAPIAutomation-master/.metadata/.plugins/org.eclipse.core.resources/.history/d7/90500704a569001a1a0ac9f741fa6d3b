@@ -1,0 +1,104 @@
+package apiHappyPathTest;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import utilities.TestBase;
+
+public class ServiceProvisioning_HappyPathTest extends TestBase{
+	
+	private String apiURL;
+
+	//@Test(priority = 4)
+	public void getAllHearingSheets_HappyPath() throws IOException
+	{
+		//Get All Hearing Sheet HappyPath
+		apiURL = getAPI_WithoutQueryParameter(getAllHearingSheetURL_Resoruce());
+		getCall("Get All Hearing Sheet Happy Path Test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	//@Test(priority = 2)
+	public void createHearingSheets_HappyPath() throws IOException
+	{
+		//Create hearing sheet Happy Path test
+		apiURL = postAPI_WithBodyParameter(createHearingSheetURL_Resource());
+		postCall_WithBodyParameters("Create Hearing Sheet Happy Path Test", apiURL, validBodyParam());
+		validateStatusCodeCreated(response);
+	}
+	
+	//@Test(priority = 3)
+	public void createServerRequest_HappyPath() throws IOException
+	{
+		//Create Server Request Happy Path test
+		apiURL = postAPI_WithBodyParameter(getCreateServerRequestURL_Resoruce());
+		postCall_WithBodyParameters("Create Server Request Happy Path Test", apiURL, validBodyParam());
+		validateStatusCodeCreated(response);
+	}
+	
+	//@Test(priority = 1)
+	public void updateServerRequestForm_HappyPath() throws IOException
+	{
+		//Update Server Request Happy Path test
+		apiURL = postAPI_WithoutBodyParameter(updateServerRequestURL_Resoruce(), querPararmeter_seqNo(), seqNo(), null, null);
+		postCall_WithBodyParameters("Update Server Request Happy Path test", apiURL, validBodyParam());
+		validateStatusCodeCreated(response);
+	}
+	
+	//@Test(priority = 1)
+	public void insertServerRequestFormToaHearingSheet_HappyPath() throws IOException
+	{
+		//Insert Server Request Happy Path test
+		apiURL = postAPI_WithoutBodyParameter(insertserverrequestURL_Resoruce(), querPararmeter_hearingsheetid(), hearingsheetid_value(), null, null);
+		postCall_WithBodyParameters("Insert Server Request Happy Path test", apiURL, validBodyParam());
+		validateStatusCodeOK(response);
+	}
+	
+	//@Test(priority = 1)
+	public void linkOrdertoHearingSheet_HappyPath() throws IOException
+	{
+		//Link Order to Hearing Sheet Happy Path test
+		apiURL = postAPI_WithoutBodyParameter(linkOrderToHearingSheetURL_Resoruce(), querPararmeter_Orderforhearingsheetid(), hearingsheetid_value(), querPararmeter_OrderId(), orderId_Value());
+		postCall_WithOutBodyParameters("linkOrdertohearingsheet", apiURL);
+		validateStatusCodeOK(response);
+	}
+	//@Test(priority = 1)
+	public void getAHearingSheet_HappyPath() throws IOException
+	{
+		//get a hearing sheet Happy Path test
+		apiURL = getAPI_WithQueryParam(createHearingSheetURL_Resource(), querPararmeter_hearingsheetid(), hearingsheetid_value(), null, null);
+		getCall("Get a Hearing sheet Happy path test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	//@Test(priority = 1)
+	public void searchHearingSheet_HappyPath() throws IOException
+	{
+		//Search hearing sheet Happy Path test
+		apiURL = getAPI_WithQueryParam(searchhearingsheetsURL_Resource(), querPararmeter_hearingsheetid(), hearingsheetid_value(), null, null);
+		getCall("Search hearing sheet Happy Path test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	@Test(priority = 1)
+	public void deleteaHearingSheet_HappyPath() throws IOException
+	{
+		//Delete hearing sheet Happy Path test
+		apiURL = deleteAPI_Delete(deletesheetURL_Resource(), querPararmeter_hearingsheetname(),hearingsheetname_Value(), null, null);
+		deleteCall("Delete hearing sheet Happy Path test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	//@Test(priority = 4)
+	public void getOrderForHearingSheet_HappyPath() throws IOException
+	{
+		//Get order for hearing sheet Happy Path test
+		apiURL = getAPI_WithQueryParam(getorderforHearingSheetURL_Resource(), querPararmeter_hearingsheetid(), querPararmeter_Orderforhearingsheetid(), "", "");
+		getCall("Get order for hearing sheet Happy Path test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	
+		
+}

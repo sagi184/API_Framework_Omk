@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="8" total="40" passed="31" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-03-19T17:58:15 IST" name="SMBC_APITesting_RegressionSuite" finished-at="2020-03-19T17:58:57 IST" duration-ms="42631">
+    <groups>
+    </groups>
+    <test started-at="2020-03-19T17:58:15 IST" name="APIAutomation_TestCases" finished-at="2020-03-19T17:58:57 IST" duration-ms="42631">
+      <class name="apiInvalidTest.JenkinsTransactionStore_InvalidTest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:52 IST" name="beforeclass" finished-at="2020-03-19T17:58:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="findAJenkinsTransaction_withbuilIdQueryParamter_InvalidTest()[pri:1, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:52 IST" name="findAJenkinsTransaction_withbuilIdQueryParamter_InvalidTest" finished-at="2020-03-19T17:58:53 IST" duration-ms="708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAJenkinsTransaction_withbuilIdQueryParamter_InvalidTest -->
+        <test-method signature="findAJenkinsTransaction_withqueueIdQueryParamter_Invalidtest()[pri:2, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:53 IST" name="findAJenkinsTransaction_withqueueIdQueryParamter_Invalidtest" finished-at="2020-03-19T17:58:54 IST" duration-ms="715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAJenkinsTransaction_withqueueIdQueryParamter_Invalidtest -->
+        <test-method signature="insertJenkinsTransaction_InvalidTest()[pri:3, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:54 IST" name="insertJenkinsTransaction_InvalidTest" finished-at="2020-03-19T17:58:55 IST" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertJenkinsTransaction_InvalidTest -->
+        <test-method signature="updateCatalog_InvalidTest()[pri:4, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:55 IST" name="updateCatalog_InvalidTest" finished-at="2020-03-19T17:58:55 IST" duration-ms="750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCatalog_InvalidTest -->
+        <test-method signature="deleteAJenkinsTransaction_invalidTest()[pri:5, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:55 IST" name="deleteAJenkinsTransaction_invalidTest" finished-at="2020-03-19T17:58:56 IST" duration-ms="762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAJenkinsTransaction_invalidTest -->
+        <test-method signature="cancelAJenkinsTransaction_invalidTest()[pri:6, instance:apiInvalidTest.JenkinsTransactionStore_InvalidTest@6a400542]" started-at="2020-03-19T17:58:56 IST" name="cancelAJenkinsTransaction_invalidTest" finished-at="2020-03-19T17:58:57 IST" duration-ms="690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancelAJenkinsTransaction_invalidTest -->
+      </class> <!-- apiInvalidTest.JenkinsTransactionStore_InvalidTest -->
+      <class name="apiHappyPathTest.JenkinsTransactionStore_HappyPathTest">
+        <test-method is-config="true" signature="reportGeneration()[pri:0, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:15 IST" name="reportGeneration" finished-at="2020-03-19T17:58:15 IST" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportGeneration -->
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:15 IST" name="beforeclass" finished-at="2020-03-19T17:58:15 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="insertJenkinsTransaction_HappyPath()[pri:1, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:15 IST" name="insertJenkinsTransaction_HappyPath" finished-at="2020-03-19T17:58:18 IST" duration-ms="2751" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertJenkinsTransaction_HappyPath -->
+        <test-method signature="getAllJenkinsTransaction_HappyPath()[pri:2, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:18 IST" name="getAllJenkinsTransaction_HappyPath" finished-at="2020-03-19T17:58:18 IST" duration-ms="866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllJenkinsTransaction_HappyPath -->
+        <test-method signature="findAJenkinsTransaction_withbuilIdQueryParamter_HappyPath()[pri:3, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:18 IST" name="findAJenkinsTransaction_withbuilIdQueryParamter_HappyPath" finished-at="2020-03-19T17:58:19 IST" duration-ms="910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAJenkinsTransaction_withbuilIdQueryParamter_HappyPath -->
+        <test-method signature="findAJenkinsTransaction_withqueueIdQueryParamter_HappyPath()[pri:4, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:19 IST" name="findAJenkinsTransaction_withqueueIdQueryParamter_HappyPath" finished-at="2020-03-19T17:58:20 IST" duration-ms="916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAJenkinsTransaction_withqueueIdQueryParamter_HappyPath -->
+        <test-method signature="updateCatalog_HappyPath()[pri:5, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:20 IST" name="updateCatalog_HappyPath" finished-at="2020-03-19T17:58:22 IST" duration-ms="1671" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <500>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <500>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+at utilities.ValidateResponse.validateStatusCodeOK(ValidateResponse.java:24)
+at apiHappyPathTest.JenkinsTransactionStore_HappyPathTest.updateCatalog_HappyPath(JenkinsTransactionStore_HappyPathTest.java:71)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCatalog_HappyPath -->
+        <test-method signature="getAllPendingScheduledJobs_HappyPathTest()[pri:6, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:22 IST" name="getAllPendingScheduledJobs_HappyPathTest" finished-at="2020-03-19T17:58:23 IST" duration-ms="769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllPendingScheduledJobs_HappyPathTest -->
+        <test-method signature="getAllUpdatedScheduledJobs_HappyPathTest()[pri:7, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:23 IST" name="getAllUpdatedScheduledJobs_HappyPathTest" finished-at="2020-03-19T17:58:24 IST" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUpdatedScheduledJobs_HappyPathTest -->
+        <test-method signature="getAllCancelledScheduledJobs_HappyPathTest()[pri:8, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:24 IST" name="getAllCancelledScheduledJobs_HappyPathTest" finished-at="2020-03-19T17:58:24 IST" duration-ms="848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCancelledScheduledJobs_HappyPathTest -->
+        <test-method signature="cancelAJenkinsTransaction_HappyPath()[pri:9, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:24 IST" name="cancelAJenkinsTransaction_HappyPath" finished-at="2020-03-19T17:58:27 IST" duration-ms="2554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancelAJenkinsTransaction_HappyPath -->
+        <test-method signature="deleteAJenkinsTransaction_HappyPath()[pri:10, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:27 IST" name="deleteAJenkinsTransaction_HappyPath" finished-at="2020-03-19T17:58:29 IST" duration-ms="1977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAJenkinsTransaction_HappyPath -->
+        <test-method is-config="true" signature="email()[pri:0, instance:apiHappyPathTest.JenkinsTransactionStore_HappyPathTest@64cd705f]" started-at="2020-03-19T17:58:57 IST" name="email" finished-at="2020-03-19T17:59:05 IST" duration-ms="7304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- email -->
+      </class> <!-- apiHappyPathTest.JenkinsTransactionStore_HappyPathTest -->
+      <class name="apiHappyPathTest.StaticPage_HappyPathTest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:29 IST" name="beforeclass" finished-at="2020-03-19T17:58:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="insertJCustomScriptData_HappyPath()[pri:1, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:29 IST" name="insertJCustomScriptData_HappyPath" finished-at="2020-03-19T17:58:31 IST" duration-ms="1611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertJCustomScriptData_HappyPath -->
+        <test-method signature="getAllCustomScriptDataDetails_HappyPath()[pri:2, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:31 IST" name="getAllCustomScriptDataDetails_HappyPath" finished-at="2020-03-19T17:58:31 IST" duration-ms="598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCustomScriptDataDetails_HappyPath -->
+        <test-method signature="searchCustomScriptData_HappyPath()[pri:3, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:31 IST" name="searchCustomScriptData_HappyPath" finished-at="2020-03-19T17:58:32 IST" duration-ms="563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchCustomScriptData_HappyPath -->
+        <test-method signature="editCustomScriptData_HappyPath()[pri:4, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:32 IST" name="editCustomScriptData_HappyPath" finished-at="2020-03-19T17:58:32 IST" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCustomScriptData_HappyPath -->
+        <test-method signature="deleteCustomScriptData_HappyPath()[pri:5, instance:apiHappyPathTest.StaticPage_HappyPathTest@9225652]" started-at="2020-03-19T17:58:32 IST" name="deleteCustomScriptData_HappyPath" finished-at="2020-03-19T17:58:34 IST" duration-ms="1887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomScriptData_HappyPath -->
+      </class> <!-- apiHappyPathTest.StaticPage_HappyPathTest -->
+      <class name="apiHappyPathTest.ServiceProvisioning_HappyPathTest">
+        <test-method signature="createServerRequest_HappyPath()[pri:1, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:34 IST" name="createServerRequest_HappyPath" finished-at="2020-03-19T17:58:35 IST" duration-ms="705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createServerRequest_HappyPath -->
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:34 IST" name="beforeclass" finished-at="2020-03-19T17:58:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="createHearingSheets_HappyPath()[pri:2, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:35 IST" name="createHearingSheets_HappyPath" finished-at="2020-03-19T17:58:36 IST" duration-ms="1510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createHearingSheets_HappyPath -->
+        <test-method signature="updateServerRequestForm_HappyPath()[pri:3, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:36 IST" name="updateServerRequestForm_HappyPath" finished-at="2020-03-19T17:58:37 IST" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateServerRequestForm_HappyPath -->
+        <test-method signature="insertServerRequestFormToaHearingSheet_HappyPath()[pri:4, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:37 IST" name="insertServerRequestFormToaHearingSheet_HappyPath" finished-at="2020-03-19T17:58:38 IST" duration-ms="777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertServerRequestFormToaHearingSheet_HappyPath -->
+        <test-method signature="linkOrdertoHearingSheet_HappyPath()[pri:5, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:38 IST" name="linkOrdertoHearingSheet_HappyPath" finished-at="2020-03-19T17:58:38 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linkOrdertoHearingSheet_HappyPath -->
+        <test-method signature="getAllHearingSheets_HappyPath()[pri:6, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:38 IST" name="getAllHearingSheets_HappyPath" finished-at="2020-03-19T17:58:45 IST" duration-ms="6690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllHearingSheets_HappyPath -->
+        <test-method signature="searchHearingSheet_HappyPath()[pri:7, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:45 IST" name="searchHearingSheet_HappyPath" finished-at="2020-03-19T17:58:47 IST" duration-ms="1490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHearingSheet_HappyPath -->
+        <test-method signature="getAHearingSheet_HappyPath()[pri:8, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:47 IST" name="getAHearingSheet_HappyPath" finished-at="2020-03-19T17:58:51 IST" duration-ms="4404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAHearingSheet_HappyPath -->
+        <test-method signature="getOrderForHearingSheet_HappyPath()[pri:9, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:51 IST" name="getOrderForHearingSheet_HappyPath" finished-at="2020-03-19T17:58:52 IST" duration-ms="612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getOrderForHearingSheet_HappyPath -->
+        <test-method signature="deleteaHearingSheet_HappyPath()[pri:10, instance:apiHappyPathTest.ServiceProvisioning_HappyPathTest@654f0d9c]" started-at="2020-03-19T17:58:52 IST" name="deleteaHearingSheet_HappyPath" finished-at="2020-03-19T17:58:52 IST" duration-ms="820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteaHearingSheet_HappyPath -->
+      </class> <!-- apiHappyPathTest.ServiceProvisioning_HappyPathTest -->
+      <class name="apiInvalidTest.StaticPage_InvalidTest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:apiInvalidTest.StaticPage_InvalidTest@6580cfdd]" started-at="2020-03-19T17:58:57 IST" name="beforeclass" finished-at="2020-03-19T17:58:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="insertJCustomScriptData_HappyPath()[pri:0, instance:apiInvalidTest.StaticPage_InvalidTest@6580cfdd]" started-at="2020-03-19T17:58:57 IST" name="insertJCustomScriptData_HappyPath" finished-at="2020-03-19T17:58:57 IST" duration-ms="431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertJCustomScriptData_HappyPath -->
+      </class> <!-- apiInvalidTest.StaticPage_InvalidTest -->
+    </test> <!-- APIAutomation_TestCases -->
+  </suite> <!-- SMBC_APITesting_RegressionSuite -->
+</testng-results>

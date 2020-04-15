@@ -1,0 +1,38 @@
+package apiHappyPathTest;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.sun.mail.util.QEncoderStream;
+
+import utilities.TestBase;
+
+public class ServiceProvisioning_HappyPathTest extends TestBase{
+	
+	private String apiURL;
+
+	@Test(priority = 1)
+	public void getAllHearingSheets_HappyPath() throws IOException
+	{
+		//Get All Hearing Sheet HappyPath
+		apiURL = getAPI_WithoutQueryParameter(getAllHearingSheetURL_Resoruce());
+		getCall("Get All Hearing Sheet Happy Path Test", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	@Test(priority = 2)
+	public void searchHearingSheets_HappyPath() throws IOException
+	{
+		//Create hearing sheet Happy Path test
+		apiURL = postAPI_WithBodyParameter(createHearingSheetURL_Resource());
+		postCall_WithBodyParameters("Create Hearing Sheet Happy path", apiURL, "validBodyParam");
+		validateStatusCodeOK(response);
+		//Get All Hearing Sheet HappyPath
+		//apiURL = getAPI_WithQueryParam(apiResource, querPararmeter_jobName(), firstQueryParmValue, secondQueryParmVariable, secondQueryParmValue)//getAPI_WithoutQueryParameter(getAllHearingSheetURL_Resoruce());
+		//getCall("Get All Hearing Sheet Happy Path Test", apiURL);
+		//validateStatusCodeOK(response);
+	}
+	
+
+}

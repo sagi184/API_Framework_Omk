@@ -1,0 +1,76 @@
+package apiHappyPathTest;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import utilities.ValidateResponse;
+
+public class StaticPage_HappyPathTest extends ValidateResponse{
+	public String apiURL;
+	
+	@Test (priority = 1)
+	public void insertJCustomScriptData_HappyPath() throws IOException
+	{
+		apiURL = postAPI_WithBodyParameter(insertJCustomScriptDataURL_Resource());
+		postCall_WithBodyParameters("Insert Custom Scriot Data HappyPathTest", apiURL, "validBodyParam");
+		validateStatusCodeCreated(response);
+	}
+	
+	@Test (priority = 2)
+	public void getAllCustomScriptDataDetails_HappyPath() throws IOException
+	{
+		apiURL = getAPI_WithoutQueryParameter(insertJCustomScriptDataURL_Resource());
+		getCall("Get All Custom Script Data", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	@Test(priority = 3)
+	public void searchCustomScriptData_HappyPath() throws IOException
+	{
+		apiURL = getAPI_WithQueryParam(searchCustomScriptDataURL_Resoruce(), querPararmeter_type(),type(),querPararmeter_name(), name());
+		getCall("Find a Jenkins Transaction with QueryParameter NotEmpty HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+	
+	
+	@Test (priority = 4)
+	public void editCustomScriptData_HappyPath() throws IOException
+	{
+		apiURL = getAPI_WithQueryParam(editCustomScriptDataURL_Resoruce(), querPararmeter_type(),type(),querPararmeter_name(), name());;
+		postCall_WithBodyParameters("Insert Custom Scriot Data HappyPathTest", apiURL, "validBodyParam");
+		validateStatusCodeOK(response);
+	}
+	
+	@Test (priority = 5)
+	public void deleteCustomScriptData_HappyPath() throws IOException
+	{
+		apiURL = deleteAPI_Delete(insertJCustomScriptDataURL_Resource(), querPararmeter_type(),type(),querPararmeter_name(), name());		
+		deleteCall("Delete Custom Script Data HappyPathTest", apiURL);
+		validateStatusCodeOK(response);
+	}
+		
+	@BeforeClass
+	public void beforeclass() throws IOException
+	{
+		api_objects();
+	}
+	
+	@BeforeMethod
+	public void reportGeneration() 
+	{
+		report();          //initExtentReport, initReport
+	}
+
+
+	/*@AfterMethod
+	public void flushExtReport()
+	{
+		extflush();
+	}*/
+
+}

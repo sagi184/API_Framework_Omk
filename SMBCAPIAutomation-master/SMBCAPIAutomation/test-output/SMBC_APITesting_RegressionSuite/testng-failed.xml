@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SMBC_APITesting_RegressionSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="APIAutomation_TestCases(failed)">
+    <classes>
+      <class name="apiHappyPathTest.JenkinsTransactionStore_HappyPathTest">
+        <methods>
+          <include name="reportGeneration"/>
+          <include name="beforeclass"/>
+          <include name="email"/>
+          <include name="updateCatalog_HappyPath"/>
+        </methods>
+      </class> <!-- apiHappyPathTest.JenkinsTransactionStore_HappyPathTest -->
+    </classes>
+  </test> <!-- APIAutomation_TestCases(failed) -->
+</suite> <!-- Failed suite [SMBC_APITesting_RegressionSuite] -->
